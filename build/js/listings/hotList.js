@@ -12,7 +12,7 @@ function hotList(){
             $("#list").html(html)
 
             // load the first event to view
-            post(posts[0].data.url,posts[0].data.title)
+            post(posts[0].data)
 
         })
 

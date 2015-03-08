@@ -1,11 +1,17 @@
-function post(url, title){
-	console.log('viewing post: ', url)
+function post(id){
 
-	$.get("/reddit-api/templates/postView.jade", function(template) {
+	$.get("https://api.reddit.com/comments/" + id, function(data) {
+        var post = data[0].data.children[0].data
+        
+        $.get("/reddit-api/templates/postView.jade", function(template) {
 
-		var html = jade.render(template, {url: url, title: title})
-		   
-		$("#details").html(html)
+            // render the template
+            var html = jade.render(template, {item: post})            
 
-	})
+            // assign the rendered html to the dom element whose id is #details
+            $("#details").html(html)
+
+        })
+
+    })
 }

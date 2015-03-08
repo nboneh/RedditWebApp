@@ -1,4 +1,4 @@
 ---
-title: Github Data
+title: Reddit Data
 template: index.jade
 ---

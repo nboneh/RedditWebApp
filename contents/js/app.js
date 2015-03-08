@@ -1,8 +1,8 @@
-$( "#frontpage" ).on( "click", function( event ) {
-    frontPageList()
+$( "#hotList" ).on( "click", function( event ) {
+    hotList()
 })
 
-$( "#users" ).on( "click", function( event ) {
-    usersList()
+$( "#newList" ).on( "click", function( event ) {
+    newList()
 })
 
